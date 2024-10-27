@@ -1,0 +1,41 @@
+.imgPokes {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn {
+    background-color: #aa99ca; /* Morado pastel */
+    color: rgb(0, 0, 0); /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 10px 10px; /* Espaciado interno */
+    font-size: 16px; /* Tamaño de fuente */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+    transition: background-color 0.3s, transform 0.3s; /* Transición suave */
+}
+
+.btn1 {
+    background-color: #aa99ca; /* Morado pastel */
+    color: rgb(0, 0, 0); /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 10px 11px; /* Espaciado interno */
+    margin-left: 80px;
+    font-size: 16px; /* Tamaño de fuente */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+    transition: background-color 0.3s, transform 0.3s; /* Transición suave */
+}
+
+.btn:hover {
+    background-color: #d48cd3; /* Color más oscuro al pasar el mouse */
+    
+    transform: translateY(-2px); /* Efecto de levantamiento */
+}
+
+.btn1:hover {
+    background-color: #d48cd3; /* Color más oscuro al pasar el mouse */
+    
+    transform: translateY(-2px); /* Efecto de levantamiento */
+}
