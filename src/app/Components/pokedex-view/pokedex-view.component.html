@@ -1,17 +1,21 @@
 <section class="pokedex-view">
     <h1 class="title">POKEDEX</h1>
     <br>
-    <div class="main-screen">
-        <div class="pokemon-display">
-            <img [src]="pokemonImagen" alt="" style="width:auto; height: 14em;">
+    <section class="pokedex" [class.scanning]="isScanning"> 
+        <div class="main-screen">
+            <div class="pokemon-display" [ngClass]="pokemonDisplayClass">
+                <img [src]="pokemonImagen" alt="Pokémon" style="width:auto; height: 18em;">
+            </div>
+            <div class="info-icon"></div> <!-- Ícono de información -->
         </div>
-        <div class="info-icon"></div> <!-- Ícono de información -->
-    </div>
 
-    <div class="controls">
-        <button class="btn" (click)="changePokemon(-1)">◀</button>
-        <button class="btn" (click)="changePokemon(1)">▶</button>
-    </div>
+        <div class="controls">
+            <button class="btn" (click)="changePokemon(-1)">◀</button>
+            <button class="btn" (click)="changePokemon(1)">▶</button>
+        </div>
 
-    <app-grafico></app-grafico>
+        <section class="graph">
+            <app-grafico [pokemonData]="pokemonData"></app-grafico>
+        </section>
+    </section>
 </section>

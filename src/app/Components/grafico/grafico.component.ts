@@ -1,5 +1,5 @@
-import { NgIf, NgFor } from '@angular/common';
-import { Component } from '@angular/core';
+import { NgIf } from '@angular/common';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-grafico',
@@ -9,10 +9,19 @@ import { Component } from '@angular/core';
   styleUrl: './grafico.component.css'
 })
 export class GraficoComponent {
-  vidaPokemon: number = 80;
+  vidaPokemon: number = 70;
   escudoPokemon: number = 90;
-  ataquePokemon: number = 30;
-  nombrePokemon: string = "Mewtwo";
-  tipoPokemon: string = "Psíquico";
-  idPokemon: string = "150";
+  ataquePokemon: number = 50;
+  nombrePokemon: string = "";
+  tipoPokemon: string = "";
+  idPokemon: string = "";
+
+  @Input() set pokemonData(data: any) {
+    if (data) {
+      this.idPokemon = `#${data.id}`;
+      this.nombrePokemon = data.name.charAt(0).toUpperCase() + data.name.slice(1);
+      this.tipoPokemon = data.types[0].type.name;
+      // Ya no modificamos vida, ataque ni escudo
+    }
+  }
 }

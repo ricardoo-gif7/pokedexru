@@ -1,6 +1,6 @@
 <section class="stats">
     <div class="pokemon-info">
-        <span>#{{idPokemon}}</span>
+        <span>{{idPokemon}}</span>
         <h2 class="pokemon-name">{{nombrePokemon}}</h2>
         <div class="pokemon-type">
             
@@ -11,30 +11,30 @@
     <div class="stat-bar">
         <div class="stat-label">
             <span>VIDA</span>
-            <span>{{vidaPokemon}}/100</span>
+            <span>{{vidaPokemon}}%</span>
         </div>
         <div class="stat-progress">
-            <div class="hp-bar" [style.width.%]="vidaPokemon"></div>
+            <div class="stat-inner hp-bar" [style.width.%]="vidaPokemon"></div> <!-- Barra de HP -->
         </div>
     </div>
 
     <div class="stat-bar">
         <div class="stat-label">
             <span>DEFENSA</span>
-            <span>{{escudoPokemon}}/100</span>
+            <span>{{escudoPokemon}}%</span>
         </div>
         <div class="stat-progress">
-            <div class="defense-bar" [style.width.%]="escudoPokemon"></div>
+            <div class="stat-inner defense-bar" [style.width.%]="escudoPokemon"></div> <!-- Barra de Defensa -->
         </div>
     </div>
 
     <div class="stat-bar">
         <div class="stat-label">
             <span>ATAQUE</span>
-            <span>{{ataquePokemon}}/100</span>
+            <span>{{ataquePokemon}}%</span>
         </div>
         <div class="stat-progress">
-            <div class="attack-bar" [style.width.%]="ataquePokemon"></div>
+            <div class="stat-inner attack-bar" [style.width.%]="ataquePokemon"></div> <!-- Barra de Ataque -->
         </div>
     </div>
 </section>

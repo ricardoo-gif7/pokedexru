@@ -17,19 +17,19 @@
 }
 
 .main-screen {
-  background-color: #00BFFF; /* Fondo azul */
+  background-color: #79aedd;
   border-radius: 10px;
-  width: 300px;
-  height: 200px;
+  width: 100%;
+  height: 300px; /* Ajustado para coincidir con la sección de estadísticas */
   margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 5px solid white; /* Borde blanco */
+  border: 5px solid white;
   position: relative;
+  border-bottom-left-radius: 40px;
+  box-sizing: border-box;
 }
-
-
 
 .info-icon {
   position: absolute;
@@ -37,38 +37,16 @@
   right: 10px;
   width: 30px;
   height: 30px;
-  background-color: #FFD700; /* Color del ícono */
+  background-color: #164569; /* Color del ícono */
   border-radius: 50%;
-  border: 3px solid #000; /* Borde negro */
+  border: 3px solid #1a1a1a; /* Borde negro */
 }
-
-.navigation-arrows {
-  position: absolute;
-  left: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-
-.arrow {
-  width: 20px;
-  height: 20px;
-  background-color: gray;
-  text-align: center;
-  line-height: 20px;
-  color: white;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
 
 .controls {
   display: flex;
   justify-content: center; /* Centramos los botones */
   margin: 20px 0;
-  gap: 10px; /* Espacio entre los botones */
+  gap: 30px; /* Espacio entre los botones */
 }
 
 .btn {
@@ -86,27 +64,52 @@
   background-color: #FFA500; /* Color más claro al pasar el mouse */
 }
 
-.stat-progress {
-  height: 20px;
-  background-color: #ddd; /* Fondo gris para la barra */
-  border: 2px solid #000; /* Borde negro */
-  position: relative; /* Para posicionar la barra interna */
-}
-
-.hp-bar {
-  background-color: #FF0000; /* Barra de HP */
-}
-
-.defense-bar {
-  background-color: #0000FF; /* Barra de Defensa */
-}
-
-.attack-bar {
-  background-color: #FF0000; /* Barra de Ataque */
-}
-
-.stat-inner {
+.pokemon-display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
   height: 100%;
-  border-radius: 5px; /* Bordes redondeados para las barras internas */
-  position: absolute; /* Posicionamos la barra interna */
+  position: relative; /* Para que el escaneo se posicione correctamente */
+  overflow: hidden; /* Evita que el escaneo se desborde */
 }
+
+.scanning::before {
+  content: '';
+  position: absolute;
+  top: -25%; /* Comienza desde arriba del contenedor */
+  left: 0;
+  width: 100%;
+  height: 25%; /* Altura del escaneo */
+  background: linear-gradient(transparent, rgba(255, 255, 255, 0.8), transparent);
+  animation: scan 1s linear infinite; /* Animación de escaneo */
+}
+
+@keyframes scan {
+  0% {
+    top: -25%; /* Comienza desde arriba */
+  }
+  100% {
+    top: 100%; /* Se mueve hasta abajo del contenedor */
+  }
+}
+
+.scanning.active {
+  /* Estilo cuando la imagen está activa */
+  opacity: 1;
+}
+
+/* Transición suave para las imágenes */
+img {
+  transition: opacity 2s ease-in-out;
+}
+
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter-active {
+  opacity: 1;
+}
+
+

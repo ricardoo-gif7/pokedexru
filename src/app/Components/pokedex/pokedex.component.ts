@@ -17,4 +17,5 @@ export class PokedexComponent {
   nextPokemon(){
     this.pokemonId.emit(1);
   }
+  
 }
