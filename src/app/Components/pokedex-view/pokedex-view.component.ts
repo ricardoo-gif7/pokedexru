@@ -10,13 +10,12 @@ import { GraficoComponent } from '../grafico/grafico.component';
   styleUrl: './pokedex-view.component.css'
 })
 export class PokedexViewComponent {
-  pokemonId: number = 0;
-  pokemonImagen:string = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/'+this.pokemonId+'.png';
+  pokemonId: number = 1; // Empezamos desde el primer Pokémon
+  pokemonImagen: string = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${this.pokemonId}.png`;
 
-  changePokemon(evento:number) : void{
-    this.pokemonId+=evento;
-    this.pokemonImagen = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/'+this.pokemonId+'.png';
+  changePokemon(evento: number): void {
+    this.pokemonId += evento;
+    if (this.pokemonId < 1) this.pokemonId = 1; // Evitar números negativos
+    this.pokemonImagen = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${this.pokemonId}.png`;
   }
-
-  
 }

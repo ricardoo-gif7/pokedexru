@@ -1,14 +1,17 @@
 <section class="pokedex-view">
-    <span class="title">Pokedex</span>
-    <section class="pokedex">
-<!-- Suggested code may be subject to a license. Learn more: ~LicenseLog:4120098516. -->
-    <app-pokedex  [imageUrl]=pokemonImagen (pokemonId)="changePokemon($event)"  ></app-pokedex>
-        <span class="point"></span>
-        <span class="point"></span>
-    </section>
-    <section class="graph">
-        <app-grafico></app-grafico>
-    </section>
+    <h1 class="title">POKEDEX</h1>
+    <br>
+    <div class="main-screen">
+        <div class="pokemon-display">
+            <img [src]="pokemonImagen" alt="" style="width:auto; height: 14em;">
+        </div>
+        <div class="info-icon"></div> <!-- Ícono de información -->
+    </div>
 
-    <button class="btn" (click)="changePokemon(pokemonId)">Cambiar pokemon</button>
+    <div class="controls">
+        <button class="btn" (click)="changePokemon(-1)">◀</button>
+        <button class="btn" (click)="changePokemon(1)">▶</button>
+    </div>
+
+    <app-grafico></app-grafico>
 </section>

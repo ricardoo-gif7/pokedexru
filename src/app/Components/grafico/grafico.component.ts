@@ -1,4 +1,4 @@
-import { NgIf } from '@angular/common';
+import { NgIf, NgFor } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
@@ -9,10 +9,10 @@ import { Component } from '@angular/core';
   styleUrl: './grafico.component.css'
 })
 export class GraficoComponent {
-  vidaPokemon: number = 100;
-  escudoPokemon: number = 100;
-  ataquePokemon: number = 100;
+  vidaPokemon: number = 80;
+  escudoPokemon: number = 90;
+  ataquePokemon: number = 30;
   nombrePokemon: string = "Mewtwo";
   tipoPokemon: string = "Psíquico";
-  idPokemon: string = "#150";
+  idPokemon: string = "150";
 }

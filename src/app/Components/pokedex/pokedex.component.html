@@ -1,5 +1,7 @@
 <section class="imgPokes">
-<img [src]="imageUrl" style="width: 300px; height: auto;">
+    <img [src]="imageUrl" alt="Pokemon" style="width: 300px; height: auto;">
 </section>
-<button class="btn" (click)="previousPokemon()">Anterior Pokemon</button>
-<button class="btn1" (click)="nextPokemon()">Pokemon Siguiente</button>
+<div class="controls">
+    <button class="btn" (click)="previousPokemon()">←</button>
+    <button class="btn" (click)="nextPokemon()">→</button>
+</div>
