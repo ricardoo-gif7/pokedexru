@@ -1,10 +1,11 @@
 .stats {
-  background-color: #e5df73;
-  border: 3px solid #000;
+  background: linear-gradient(145deg, #ffd54f, #ffca28); /* Gradiente amarillo dorado */
+  border: 3px solid #2c2c2c;
   padding: 15px;
   margin-top: 20px;
   border-radius: 10px;
-  border-top-right-radius:40px;
+  border-top-right-radius: 40px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .pokemon-info {
@@ -13,9 +14,10 @@
 }
 
 .pokemon-name {
-  color: #2d2d2d;
+  color: #2c2c2c;
   font-size: 20px;
   margin-bottom: 5px;
+  text-shadow: 1px 1px #ffffff;
 }
 
 .pokemon-type {
@@ -50,18 +52,28 @@
 
 .stat-progress {
   height: 20px;
-  background-color: #ddd;
-  border: 2px solid #000;
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 2px solid #2c2c2c;
   position: relative;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 .stat-inner {
   height: 100%;
-  border-top-right-radius:5px;
-  border-bottom-right-radius:5px;
+  border-radius: 8px;
   position: absolute;
+  transition: width 0.3s ease-in-out;
 }
 
-.hp-bar { background-color: #8dc78c; }
-.defense-bar { background-color: #4562ac; }
-.attack-bar { background-color: #c78c8c; }
+.hp-bar { 
+  background: linear-gradient(90deg, #66bb6a, #4caf50); /* Verde para HP */
+}
+
+.defense-bar { 
+  background: linear-gradient(90deg, #42a5f5, #1e88e5); /* Azul para Defensa */
+}
+
+.attack-bar { 
+  background: linear-gradient(90deg, #ef5350, #e53935); /* Rojo para Ataque */
+}

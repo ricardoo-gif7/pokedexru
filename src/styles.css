@@ -1,10 +1,10 @@
 body {
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
-    background-color: #f0f5ff; /* Un azul pastel muy suave para el fondo */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: 'Press Start 2P', cursive;
-  }
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: rgb(161, 161, 161); /* Fondo azul oscuro elegante */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Press Start 2P', cursive;
+}
