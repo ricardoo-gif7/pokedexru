@@ -57,6 +57,7 @@
   font-size: 12px;
   cursor: pointer;
   transition: all 0.3s ease;
+  border-radius: 5px;
 }
 
 .btn:hover {
@@ -111,5 +112,3 @@ img {
 .fade-enter-active {
   opacity: 1;
 }
-
-
