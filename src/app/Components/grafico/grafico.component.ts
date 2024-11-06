@@ -9,9 +9,9 @@ import { Component, Input } from '@angular/core';
   styleUrl: './grafico.component.css'
 })
 export class GraficoComponent {
-  vidaPokemon: number = 70;
-  escudoPokemon: number = 90;
-  ataquePokemon: number = 50;
+  vidaPokemon: number = 0;
+  escudoPokemon: number = 0;
+  ataquePokemon: number = 0;
   nombrePokemon: string = "";
   tipoPokemon: string = "";
   idPokemon: string = "";
@@ -21,7 +21,11 @@ export class GraficoComponent {
       this.idPokemon = `#${data.id}`;
       this.nombrePokemon = data.name.charAt(0).toUpperCase() + data.name.slice(1);
       this.tipoPokemon = data.types[0].type.name;
-      // Ya no modificamos vida, ataque ni escudo
+      
+      // Actualizar estadísticas y limitar a 100
+      this.vidaPokemon = Math.min(data.stats[0].base_stat);
+      this.escudoPokemon = Math.min(data.stats[2].base_stat);
+      this.ataquePokemon = Math.min(data.stats[1].base_stat);
     }
   }
 }
